@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const svg = path.join(__dirname, "../files/rank.svg");
 const axios = require("axios");
 const Joi = require("joi");
 
@@ -8,7 +7,14 @@ const express = require("express");
 const router = express.Router();
 
 const generateStat = (firstFive, profile_info, value, cb) => {
-  if (profile_info.length <= 0) return cb(404);
+  if (profile_info.length <= 0) {
+    profile_info.push({
+      rank: "256+",
+      login: value.username,
+      name: value.username,
+      contributions: "-",
+    });
+  }
 
   profile_info = profile_info[0];
 
@@ -16,17 +22,11 @@ const generateStat = (firstFive, profile_info, value, cb) => {
     firstFive[firstFive.length - 2].rank = "";
     firstFive[firstFive.length - 2].login = "...";
     firstFive[firstFive.length - 2].name = "...";
-    firstFive[firstFive.length - 2].avatarUrl = "";
     firstFive[firstFive.length - 2].contributions = "";
-    firstFive[firstFive.length - 2].company = "";
-    firstFive[firstFive.length - 2].organizations = "";
     firstFive[firstFive.length - 1].rank = profile_info.rank;
     firstFive[firstFive.length - 1].login = profile_info.login;
     firstFive[firstFive.length - 1].contributions = profile_info.contributions;
     firstFive[firstFive.length - 1].name = profile_info.name;
-    firstFive[firstFive.length - 1].avatarUrl = profile_info.avatarUrl;
-    firstFive[firstFive.length - 1].company = profile_info.company;
-    firstFive[firstFive.length - 1].organizations = profile_info.organizations;
   }
 
   let rankLine = fs.readFileSync(
@@ -44,13 +44,25 @@ const generateStat = (firstFive, profile_info, value, cb) => {
     rank: "",
     name: "Muhammadsher",
     contributions: "",
+    rankText: 22,
   };
   let svgBody = "";
+
   firstFive.forEach((e) => {
     let tmp = rankLine.replace(/\$1/g, svg.translate);
     tmp = tmp.replace(/\$2/g, svg.delay);
     tmp = tmp.replace(/\$3/g, e.rank ? e.rank : svg.rank);
     tmp = tmp.replace(/\$4/g, e.name ? e.name : e.login ? e.login : svg.name);
+    tmp = tmp.replace(
+      /\$6/g,
+      e.rank > 99
+        ? e.rank == "256+"
+          ? 37
+          : 30
+        : e.rank == "256+"
+        ? 37
+        : svg.rankText
+    );
     tmp = tmp.replace(
       /\$5/g,
       e.contributions ? e.contributions : svg.contributions
@@ -87,6 +99,9 @@ router.get("/", (req, res) => {
 
   const { error, value } = schema.validate(req.query);
   if (error) return res.sendStatus(400);
+
+  const svgPath = path.join(__dirname, "../svgs", `${value.username}.svg`);
+  if (fs.existsSync(svgPath)) return res.sendFile(svgPath);
 
   getUsers((data) => {
     const { users } = data.data;
