@@ -5,6 +5,6 @@ app.use(express.json());
 
 app.get("/rank", rank);
 
-app.listen(1234, "0.0.0.0", () =>
-  console.log(`Server started on port: ${1234}`)
+app.listen(process.env.PORT || 3000, "0.0.0.0", () =>
+  console.log(`Server started on port: ${process.env.PORT || 3000}`)
 );
