@@ -80,8 +80,6 @@ const generateStat = (firstFive, profile_info, value, cb) => {
   );
 
   rank = rank.replace(/\$2/g, svgBody);
-  //let outPut = path.join(__dirname, "../svgs", `${profile_info.login}.svg`);
-  //fs.writeFileSync(outPut, rank);
   cb(rank);
 };
 
@@ -104,9 +102,6 @@ router.get("/", (req, res) => {
 
   const { error, value } = schema.validate(req.query);
   if (error) return res.sendStatus(400);
-
-  /* const svgPath = path.join(__dirname, "../svgs", `${value.username}.svg`);
-  if (fs.existsSync(svgPath)) return res.sendFile(svgPath); */
 
   getUsers((data) => {
     const { users } = data.data;
