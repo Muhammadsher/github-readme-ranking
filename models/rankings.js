@@ -83,8 +83,8 @@ const generateStat = (firstFive, profile_info, value, cb) => {
   cb(rank);
 };
 
-const getUsers = async (cb) => {
-  let users = await axios.get("https://commiters.now.sh/rank/uzbekistan");
+const getUsers = async (value, cb) => {
+  let users = await axios.get(`https://commiters.now.sh/rank/${value.country}`);
   cb(users);
 };
 
@@ -103,7 +103,7 @@ router.get("/", (req, res) => {
   const { error, value } = schema.validate(req.query);
   if (error) return res.sendStatus(400);
 
-  getUsers((data) => {
+  getUsers(value, (data) => {
     const { users } = data.data;
     const allUsers = value.show_private ? users.private_users : users.users;
     const firstFive = allUsers.slice(0, 5);
