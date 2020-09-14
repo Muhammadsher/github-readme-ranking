@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const filePath = path.join(__dirname, "../README.md");
+const svg = path.join(__dirname, "../files/rank.svg");
 const axios = require("axios");
 
 const express = require("express");
@@ -42,7 +43,7 @@ router.get("/", (req, res) => {
       generateStat(private_info[0]);
     })
   );
-  res.send({ status: 200 });
+  res.sendFile(svg);
 });
 
 module.exports = router;
