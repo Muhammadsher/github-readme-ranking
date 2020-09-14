@@ -148,7 +148,7 @@
         x="200" 
         y="12.5" 
         data-testid="stars"
-      >5</text>
+      >15</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -193,7 +193,7 @@
         x="200" 
         y="12.5" 
         data-testid="issues"
-      >0</text>
+      >100</text>
     </g>
   </g><g transform="translate(0, 100)">
     <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
