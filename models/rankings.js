@@ -82,7 +82,7 @@ const generateStat = (firstFive, profile_info, value, cb) => {
   rank = rank.replace(/\$2/g, svgBody);
   //let outPut = path.join(__dirname, "../svgs", `${profile_info.login}.svg`);
   //fs.writeFileSync(outPut, rank);
-  cb(outPut);
+  cb(rank);
 };
 
 const getUsers = async (cb) => {
@@ -90,11 +90,16 @@ const getUsers = async (cb) => {
   cb(users);
 };
 
+const clampValue = (number, min, max) => {
+  return Math.max(min, Math.min(number, max));
+};
+
 router.get("/", (req, res) => {
   const schema = Joi.object({
     username: Joi.string().required(),
     country: Joi.string().required(),
     show_private: Joi.boolean().default(false),
+    cache_seconds: Joi.number(),
   });
 
   const { error, value } = schema.validate(req.query);
@@ -109,7 +114,14 @@ router.get("/", (req, res) => {
     const firstFive = allUsers.slice(0, 5);
     const profile_info = allUsers.filter((e) => e.login == value.username);
     generateStat(firstFive, profile_info, value, (d) => {
-      res.sendFile(d);
+      const cacheSeconds = clampValue(
+        parseInt(value.cache_seconds || 7200, 10),
+        7200,
+        86400
+      );
+      res.setHeader("Content-Type", "image/svg+xml");
+      res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
+      res.send(d);
     });
   });
 });
