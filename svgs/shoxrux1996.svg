@@ -71,7 +71,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >$1</text>
+      >Shokhrukh Shomakhmudov's GitHub rank in Uzbekistan</text>
     </g>
   </g>
           
@@ -94,7 +94,37 @@
             </g>
           </svg>
         </g>
-      <svg x="0" y="0">$2</svg> 
+      <svg x="0" y="0"><g transform="translate(0, 0)">
+    <g class="stagger" style="animation-delay: 450ms" transform="translate(25, 0)">
+        <text class="stat bold" x="0" y="12.5" style="fill:#4c71f2;">1</text>
+        <text class="stat bold" x="30" y="12.5">Sukhrob Khakimov</text>
+        <text class="stat" x="250" y="12.5">4094</text>
+    </g>
+</g><g transform="translate(0, 25)">
+    <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
+        <text class="stat bold" x="0" y="12.5" style="fill:#4c71f2;">2</text>
+        <text class="stat bold" x="30" y="12.5">Shokhrukh Shomakhmudov</text>
+        <text class="stat" x="250" y="12.5">3661</text>
+    </g>
+</g><g transform="translate(0, 50)">
+    <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
+        <text class="stat bold" x="0" y="12.5" style="fill:#4c71f2;">3</text>
+        <text class="stat bold" x="30" y="12.5">Mirakhmad Mirzajonov</text>
+        <text class="stat" x="250" y="12.5">2796</text>
+    </g>
+</g><g transform="translate(0, 75)">
+    <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
+        <text class="stat bold" x="0" y="12.5" style="fill:#4c71f2;">4</text>
+        <text class="stat bold" x="30" y="12.5">InadullaevMakhmudjon</text>
+        <text class="stat" x="250" y="12.5">2242</text>
+    </g>
+</g><g transform="translate(0, 100)">
+    <g class="stagger" style="animation-delay: 1050ms" transform="translate(25, 0)">
+        <text class="stat bold" x="0" y="12.5" style="fill:#4c71f2;">5</text>
+        <text class="stat bold" x="30" y="12.5">Farrukh Kholmukhamedov</text>
+        <text class="stat" x="250" y="12.5">2050</text>
+    </g>
+</g></svg> 
     </g>
 </svg>
     
