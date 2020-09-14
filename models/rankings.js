@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const filePath = path.join(__dirname, "README.md");
+const filePath = path.join(__dirname, "../README.md");
 const axios = require("axios");
 
 const express = require("express");
@@ -40,9 +40,9 @@ router.get("/", (req, res) => {
       console.log(public_info);
       console.log(private_info);
       generateStat(private_info[0]);
-      res.send({ status: 200 });
     })
   );
+  res.send({ status: 200 });
 });
 
 module.exports = router;
