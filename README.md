@@ -33,7 +33,7 @@
 
 [![Muhammadsher's github stats](https://github-readme-stats.vercel.app/api?username=Muhammadsher&count_private=true&include_all_commits&show_icons=true)](https://github.com/Muhammadsher)
 
-[![Muhammadsher's github stats](https://githubranknig.herokuapp.com/rank)](https://github.com/Muhammadsher)
+[![Muhammadsher's github stats](https://githubranknig.herokuapp.com/rank?username=Muhammadsher&country=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
 
 [website]: https://mcard.uz
 [twitter]: https://twitter.com/MShermamatov
