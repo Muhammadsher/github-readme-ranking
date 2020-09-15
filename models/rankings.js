@@ -72,10 +72,11 @@ const generateStat = (firstFive, profile_info, value, cb) => {
     svg.delay = svg.delay + 150;
   });
 
+  value.country_code = value.country_code.split("_").join(" ");
   rank = rank.replace(
     /\$1/g,
     `${profile_info.name}'s GitHub rank in ${
-      value.country.charAt(0).toUpperCase() + value.country.slice(1)
+      value.country_code.charAt(0).toUpperCase() + value.country_code.slice(1)
     }`
   );
 
@@ -84,7 +85,9 @@ const generateStat = (firstFive, profile_info, value, cb) => {
 };
 
 const getUsers = async (value, cb) => {
-  let users = await axios.get(`https://commiters.now.sh/rank/${value.country}`);
+  let users = await axios.get(
+    `https://commiters.now.sh/rank/${value.country_code}`
+  );
   cb(users);
 };
 
@@ -95,13 +98,15 @@ const clampValue = (number, min, max) => {
 router.get("/", (req, res) => {
   const schema = Joi.object({
     username: Joi.string().required(),
-    country: Joi.string().required(),
+    country_code: Joi.string().required(),
     show_private: Joi.boolean().default(false),
     cache_seconds: Joi.number(),
   });
 
   const { error, value } = schema.validate(req.query);
   if (error) return res.sendStatus(400);
+
+  value.country_code = value.country_code.replace(/ /g, "_").toLowerCase();
 
   getUsers(value, (data) => {
     const { users } = data.data;
