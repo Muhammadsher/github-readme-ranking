@@ -5,6 +5,7 @@
 </p>
 
 # First things first
+
 If you add a README file to the root of a public repository with the same name as your username, that README will automatically appear on your profile page. You can edit your profile README with GitHub Flavored Markdown to create a personalized section on your profile
 
 <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes">
@@ -18,7 +19,7 @@ Copy paste this into your markdown content, and that's it. Simple!
 Change the `?username=` and `?country_code=` values to your GitHub's username and country respectively.
 
 ```md
-[![Muhammadsher's github ranking](https://githubranknig.herokuapp.com/rank?username=Muhammadsher&country_code=uzbekistan)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](https://api.fizmasoft.uz/mcard/rank?username=Muhammadsher&country_code=uzbekistan)](https://github.com/Muhammadsher)
 ```
 
 [Country codes are here](./src/countries.md)
@@ -30,14 +31,14 @@ You can choose to get your private contributions by using the query parameter `?
 > Options: `&show_private=true`
 
 ```md
-[![Muhammadsher's github ranking](https://githubranknig.herokuapp.com/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](https://api.fizmasoft.uz/mcard/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
 ```
 
 #### All inbuilt themes :-
 
 Light
 
-[![Muhammadsher's github ranking](https://githubranknig.herokuapp.com/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](https://api.fizmasoft.uz/mcard/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
 
 If you are using this project and happy with it or just want to encourage me to continue creating stuff, there are few ways you can do it :-
 
