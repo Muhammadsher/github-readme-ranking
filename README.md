@@ -4,6 +4,13 @@
  <p align="center">Get dynamically generated GitHub ranking on your readmes!</p>
 </p>
 
+# First things first
+If you add a README file to the root of a public repository with the same name as your username, that README will automatically appear on your profile page. You can edit your profile README with GitHub Flavored Markdown to create a personalized section on your profile
+
+<a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes">
+ <img src="https://docs.github.com/assets/images/help/repository/username-repo-with-readme.png" align="center" alt="Special repository" />
+</a>
+
 # GitHub Rank Card
 
 Copy paste this into your markdown content, and that's it. Simple!
