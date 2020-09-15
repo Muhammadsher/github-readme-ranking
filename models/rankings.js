@@ -105,6 +105,7 @@ router.get("/", (req, res) => {
 
   getUsers(value, (data) => {
     const { users } = data.data;
+    if (!users) return res.sendStatus(404);
     const allUsers = value.show_private ? users.private_users : users.users;
     const firstFive = allUsers.slice(0, 5);
     const profile_info = allUsers.filter((e) => e.login == value.username);
