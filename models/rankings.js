@@ -81,6 +81,10 @@ const generateStat = (firstFive, profile_info, value, cb) => {
   );
 
   rank = rank.replace(/\$2/g, svgBody);
+  fs.writeFileSync(
+    path.join(__dirname, `../db/${profile_info.login}.svg`),
+    rank
+  );
   cb(rank);
 };
 
@@ -106,7 +110,21 @@ router.get("/", (req, res) => {
   const { error, value } = schema.validate(req.query);
   if (error) return res.sendStatus(400);
 
+  const cacheSeconds = clampValue(
+    parseInt(value.cache_seconds || 86400, 10),
+    86400,
+    86400 * 2
+  );
+  let newRequest = true;
   value.country_code = value.country_code.replace(/ /g, "_").toLowerCase();
+
+  let userSvg = path.join(__dirname, `../db/${value.username}.svg`);
+  if (fs.existsSync(userSvg)) {
+    newRequest = false;
+    res.setHeader("Content-Type", "image/svg+xml");
+    res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
+    res.sendFile(userSvg);
+  }
 
   getUsers(value, (data) => {
     const { users } = data.data;
@@ -115,14 +133,11 @@ router.get("/", (req, res) => {
     const firstFive = allUsers.slice(0, 5);
     const profile_info = allUsers.filter((e) => e.login == value.username);
     generateStat(firstFive, profile_info, value, (d) => {
-      const cacheSeconds = clampValue(
-        parseInt(value.cache_seconds || 7200, 10),
-        7200,
-        86400
-      );
-      res.setHeader("Content-Type", "image/svg+xml");
-      res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
-      res.send(d);
+      if (newRequest) {
+        res.setHeader("Content-Type", "image/svg+xml");
+        res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
+        res.send(d);
+      }
     });
   });
 });
