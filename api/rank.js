@@ -79,10 +79,6 @@ const generateStat = (firstFive, profile_info, value, cb) => {
     );
   
     rank = rank.replace(/\$2/g, svgBody);
-    /* fs.writeFileSync(
-      path.join(__dirname, `../db/${profile_info.login}.svg`),
-      rank
-    ); */
     cb(rank);
   };
   
@@ -115,14 +111,6 @@ module.exports = async (req, res) => {
       );
       let newRequest = true;
       value.country_code = value.country_code.replace(/ /g, "_").toLowerCase();
-    
-      /* let userSvg = path.join(__dirname, `../db/${value.username}.svg`);
-      if (fs.existsSync(userSvg)) {
-        newRequest = false;
-        res.setHeader("Content-Type", "image/svg+xml");
-        res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
-        res.send(fs.readFileSync(userSvg));
-      } */
     
       getUsers(value, (data) => {
         const { users } = data.data;
