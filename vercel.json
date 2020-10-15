@@ -1,8 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "https://github.com/Muhammadsher/github-readme-ranking"
-    }
-  ]
+    "name": "github-readme-ranking",
+    "version": 2 
 }
