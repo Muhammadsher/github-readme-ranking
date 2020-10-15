@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
 const Joi = require("joi");
+const renderError = require("../src/common/util")
 
 const generateStat = (firstFive, profile_info, value, cb) => {
     if (profile_info.length <= 0) {
@@ -105,7 +106,7 @@ module.exports = async (req, res) => {
       });
     
       const { error, value } = schema.validate(req.query);
-      if (error) return res.sendStatus(400);
+      if (error) return res.send(renderError("Bad request", "Provide required parametres"))
     
       const cacheSeconds = clampValue(
         parseInt(value.cache_seconds || 86400, 10),
@@ -120,12 +121,12 @@ module.exports = async (req, res) => {
         newRequest = false;
         res.setHeader("Content-Type", "image/svg+xml");
         res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
-        res.sendFile(userSvg);
+        res.send(fs.readFileSync(userSvg));
       }
     
       getUsers(value, (data) => {
         const { users } = data.data;
-        if (!users) return res.sendStatus(404);
+        if (!users) return res.send(renderError("User not found", "User with provided username not found"));
         const allUsers = value.show_private ? users.private_users : users.users;
         const firstFive = allUsers.slice(0, 5);
         const profile_info = allUsers.filter((e) => e.login == value.username);
