@@ -19,7 +19,7 @@ Copy paste this into your markdown content, and that's it. Simple!
 Change the `?username=` and `?country_code=` values to your GitHub's username and country respectively.
 
 ```md
-[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan)](https://github.com/Muhammadsher/github-readme-ranking)
 ```
 
 [Country codes are here](./src/countries.md)
@@ -31,7 +31,7 @@ You can choose to get your private contributions by using the query parameter `?
 > Options: `&show_private=true`
 
 ```md
-[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher/github-readme-ranking)
 ```
 
 #### All inbuilt themes :-
