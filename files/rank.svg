@@ -20,6 +20,14 @@
       fill: #333;
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
+    
+    .light-theme{
+
+    }
+
+    .dark-them{
+
+    }
 
     .bold {
       font-weight: 700;
@@ -58,7 +66,7 @@
     height="99%"
     stroke="#E4E2E2"
     width="494"
-    fill="#fffefe"
+    fill="$3"
     stroke-opacity="1"
   />
 

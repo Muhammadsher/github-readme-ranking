@@ -1,0 +1,13 @@
+{
+    "light": {
+        "bgColor": "#fffefe"
+    },
+
+    "dark": {
+        "color1": "#6DB86C",
+        "bgColor": "#2C2C2C",
+        "color3": "#E8C202",
+        "color4": "#AD610E",
+        "color5": "#4C482A"
+    }
+}
