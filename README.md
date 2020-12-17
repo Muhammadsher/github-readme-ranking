@@ -46,7 +46,7 @@ Light
 ```
 
 Dark
-[![Muhammadsher's github ranking](http://localhost:3000/?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer)
+[![Muhammadsher's github ranking](http://192.168.2.75:3000/?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer)
 
 If you are using this project and happy with it or just want to encourage me to continue creating stuff, there are few ways you can do it :-
 
