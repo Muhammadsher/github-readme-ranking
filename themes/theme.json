@@ -4,15 +4,17 @@
         "rowColor": "#14263d",
         "headerColor": "#2f80ed",
         "digitColor": "#1d232b",
-        "commitColor": "#1d232b"
+        "commitColor": "#1d232b",
+        "strokeColor": "#E4E2E2"
 
     },
 
     "dark": {
-        "bgColor": "#2C2C2C",
+        "bgColor": "#0D1117",
         "rowColor": "#ececec",
         "digitColor": "#f2a365",
         "headerColor": "#E8C202",
-        "commitColor": "#dff3e3"
+        "commitColor": "#dff3e3",
+        "strokeColor": "#000000"
     }
 }
