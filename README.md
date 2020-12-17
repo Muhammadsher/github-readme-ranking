@@ -38,15 +38,16 @@ You can choose to get your private contributions by using the query parameter `?
 
 Light
 
-[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher/github-readme-ranking)
 
 
 ```md
-[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer/github-readme-ranking)
+[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/Muhammadsher/github-readme-ranking)
 ```
 
 Dark
-[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer)
+
+[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/Muhammadsher/github-readme-ranking)
 
 If you are using this project and happy with it or just want to encourage me to continue creating stuff, there are few ways you can do it :-
 
@@ -58,5 +59,10 @@ Thanks! :heart:
 ---
 
 Contributions are welcome! <3
+
+Contributors
+
+[![](https://github.com/Muhammadsher.png?size=50)](https://github.com/Muhammadsher)
+[![](https://github.com/boxa-developer.png?size=50)](https://github.com/boxa-developer)
 
 Made with :heart: and JavaScript.
