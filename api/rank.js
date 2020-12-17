@@ -51,6 +51,17 @@ const generateStat = (firstFive, profile_info, value, cb) => {
 
     console.log(_theme)
     rank = rank.replace(/\$3/g, _theme.bgColor);
+    rank = rank.replace(/\$hfill/g, _theme.headerColor);
+    rankLine = rankLine.replace(/\$lc/g, _theme.digitColor);
+    rankLine = rankLine.replace(/\$row/g, _theme.rowColor);
+    rankLine = rankLine.replace(/\$commits/g, _theme.commitColor)
+    if (value.theme == 'dark') {
+        rank = rank.replace(/\$hideLight/g, "display: none");
+        rank = rank.replace(/\$hideDark/g, "");
+    } else {
+        rank = rank.replace(/\$hideLight/g, "");
+        rank = rank.replace(/\$hideDark/g, "display: none");
+    };
 
     firstFive.forEach((e) => {
         let tmp = rankLine.replace(/\$1/g, svg.translate);
