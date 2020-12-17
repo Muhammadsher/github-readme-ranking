@@ -40,6 +40,11 @@ Light
 
 [![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
 
+
+```md
+[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer/github-readme-ranking)
+```
+
 Dark
 [![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer)
 
