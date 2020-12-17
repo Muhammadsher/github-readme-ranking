@@ -64,7 +64,7 @@
     y="0.5"
     rx="4.5"
     height="99%"
-    stroke="#E4E2E2"
+    stroke="$stroke"
     width="494"
     fill="$3"
     stroke-opacity="1"
