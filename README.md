@@ -38,7 +38,7 @@ You can choose to get your private contributions by using the query parameter `?
 
 Light
 
-[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](http://localhost:3000?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
 
 
 ```md
