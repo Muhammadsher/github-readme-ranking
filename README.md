@@ -38,7 +38,7 @@ You can choose to get your private contributions by using the query parameter `?
 
 Light
 
-[![Muhammadsher's github ranking](http://localhost:3000?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
+[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=Muhammadsher&country_code=uzbekistan&show_private=true)](https://github.com/Muhammadsher)
 
 
 ```md
@@ -46,7 +46,7 @@ Light
 ```
 
 Dark
-[![Muhammadsher's github ranking](https://github-readme-ranking.vercel.app/api/rank?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer)
+[![Muhammadsher's github ranking](http://localhost:3000/?username=boxa-developer&country_code=uzbekistan&theme=dark)](https://github.com/boxa-developer)
 
 If you are using this project and happy with it or just want to encourage me to continue creating stuff, there are few ways you can do it :-
 
