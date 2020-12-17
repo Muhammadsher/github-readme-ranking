@@ -1,7 +1,7 @@
 <g transform="translate(0, $1)">
     <g class="stagger" style="animation-delay: $2ms" transform="translate(25, 0)">
-        <text class="stat bold" x="0" y="12.5" style="fill:#4c71f2;">$3</text>
-        <text class="stat bold" x="$6" y="12.5">$4</text>
-        <text class="stat" x="250" y="12.5">$5</text>
+        <text class="stat bold" x="0" y="12.5" style="fill:$lc;">$3</text>
+        <text class="stat bold" x="$6" y="12.5" style="fill:$row">$4</text>
+        <text class="stat" x="250" y="12.5" style="fill:$commits">$5</text>
     </g>
 </g>    

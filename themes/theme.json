@@ -1,0 +1,18 @@
+{
+    "light": {
+        "bgColor": "#fffefe",
+        "rowColor": "#14263d",
+        "headerColor": "#2f80ed",
+        "digitColor": "#1d232b",
+        "commitColor": "#1d232b"
+
+    },
+
+    "dark": {
+        "bgColor": "#2C2C2C",
+        "rowColor": "#ececec",
+        "digitColor": "#f2a365",
+        "headerColor": "#E8C202",
+        "commitColor": "#dff3e3"
+    }
+}
