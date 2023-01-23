@@ -49,7 +49,6 @@ const generateStat = (firstFive, profile_info, value, cb) => {
 
     let _theme = theme[value.theme]
 
-    console.log(_theme)
     rank = rank.replace(/\$3/g, _theme.bgColor);
     rank = rank.replace(/\$hfill/g, _theme.headerColor);
     rank = rank.replace(/\$stroke/g, _theme.digitColor);
@@ -72,12 +71,12 @@ const generateStat = (firstFive, profile_info, value, cb) => {
         tmp = tmp.replace(
             /\$6/g,
             e.rank > 99 ?
-            e.rank == "256+" ?
-            37 :
-            30 :
-            e.rank == "256+" ?
-            37 :
-            svg.rankText
+                e.rank == "256+" ?
+                    37 :
+                    30 :
+                e.rank == "256+" ?
+                    37 :
+                    svg.rankText
         );
         tmp = tmp.replace(
             /\$5/g,
@@ -91,9 +90,8 @@ const generateStat = (firstFive, profile_info, value, cb) => {
     value.country_code = value.country_code.split("_").join(" ");
     rank = rank.replace(
         /\$1/g,
-        `${profile_info.name}'s GitHub rank in ${
-      value.country_code.charAt(0).toUpperCase() + value.country_code.slice(1)
-    }`
+        `${profile_info.name}'s GitHub rank in ${value.country_code.charAt(0).toUpperCase() + value.country_code.slice(1)
+        }`
     );
 
     value.theme = value.theme.split();
@@ -102,7 +100,7 @@ const generateStat = (firstFive, profile_info, value, cb) => {
     cb(rank);
 };
 
-const getUsers = async(value, cb) => {
+const getUsers = async (value, cb) => {
     let users = await axios.get(
         `https://commiters.now.sh/rank/${value.country_code}`
     );
@@ -113,7 +111,7 @@ const clampValue = (number, min, max) => {
     return Math.max(min, Math.min(number, max));
 };
 
-module.exports = async(req, res) => {
+module.exports = async (req, res) => {
     const schema = Joi.object({
         username: Joi.string().required(),
         country_code: Joi.string().required(),

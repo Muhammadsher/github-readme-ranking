@@ -11,7 +11,9 @@
     "Github",
     "ranking"
   ],
-  "engines": { "node": "18.x" },
+  "engines": {
+    "node": "18.x"
+  },
   "author": "Mukhammadsher Shermamatov",
   "license": "ISC",
   "dependencies": {
