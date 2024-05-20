@@ -8,9 +8,7 @@
 
 If you add a README file to the root of a public repository with the same name as your username, that README will automatically appear on your profile page. You can edit your profile README with GitHub Flavored Markdown to create a personalized section on your profile
 
-<a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes">
- <img src="https://docs.github.com/assets/images/help/repository/username-repo-with-readme.png" align="center" alt="Special repository" />
-</a>
+<a href="https://docs.github.com/en/get-started/start-your-journey/setting-up-your-profile#adding-a-profile-readme">Special repository</a>
 
 # GitHub Rank Card
 
